@@ -1,6 +1,8 @@
 :root {
 	--transition: all 0.3s ease-in-out;
 	--shadow: 2px 4px 8px #00000033;
+	--text-light: #d1d5db;
+	--text-dark: #1f2937;
 }
 
 @font-face {
@@ -15,7 +17,54 @@
 
 body {
 	min-height: 100dvh;
+	font-family: Main, "Helvetica", sans-serif;
+	position: relative;
+	background-color: #ffb7c5;
+}
+
+body::before {
+	content: "";
 	background: url(../assets/images/background.jpg) center no-repeat;
 	background-size: cover;
-	font-family: Main, "Helvetica", sans-serif;
+	position: absolute;
+	inset: 0;
+	opacity: 0.75;
+	z-index: -1;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 16px 30px;
+	background-color: #0A0A0ADE;
+	color: var(--text-light);
+	box-shadow: 0 4px 8px #00000055;
+	transition: var(--transition);
+}
+
+.header h1 {
+	font-family: Accent;
+	font-size: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.navbar {
+	display: flex;
+	gap: 52px;
+}
+
+.navbar button {
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: var(--text-light);
+	border-bottom: 2px solid transparent;
+	transition: var(--transition);
+}
+
+.navbar button:hover {
+	border-bottom: 2px solid #ffb7c5;
+}
+
+.header:has(button:hover) {
+	background-color: #0A0A0A;
 }
