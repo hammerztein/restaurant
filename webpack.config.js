@@ -27,7 +27,7 @@ module.exports = {
 			},
 			{
 				test: /\.(png|jpg|jpeg|svg|gif)$/i,
-				type: 'assets/resource',
+				type: 'asset/resource',
 			},
 		],
 	},

@@ -1,0 +1,21 @@
+:root {
+	--transition: all 0.3s ease-in-out;
+	--shadow: 2px 4px 8px #00000033;
+}
+
+@font-face {
+	font-family: Main;
+	src: url(../assets/fonts/MPLUS-Regular.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: Accent;
+	src: url(../assets/fonts/Akisa-PersonalUse.otf) format("opentype");
+}
+
+body {
+	min-height: 100dvh;
+	background: url(../assets/images/background.jpg) center no-repeat;
+	background-size: cover;
+	font-family: Main, "Helvetica", sans-serif;
+}

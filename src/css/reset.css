@@ -25,13 +25,19 @@ select {
 	font: inherit;
 }
 
+button {
+	outline: none;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
 img, svg {
 	display: block;
 	max-width: 100%;
 }
 
 body {
-	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
 	scroll-behavior: smooth;
 }
