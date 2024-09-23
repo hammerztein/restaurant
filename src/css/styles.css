@@ -3,6 +3,13 @@
 	--shadow: 2px 4px 8px #00000033;
 	--text-light: #d1d5db;
 	--text-dark: #1f2937;
+	--spacing-s: 8px;
+	--spacing-m: 16px;
+	--spacing-l: 22px;
+	--border-radius: 6px;
+	--color-bg-80: #0A0A0ACC;
+	--color-bg-0: #0A0A0A;
+	--blur: blur(8px);
 }
 
 @font-face {
@@ -20,6 +27,7 @@ body {
 	font-family: Main, "Helvetica", sans-serif;
 	position: relative;
 	background-color: #ffb7c5;
+	padding-bottom: var(--spacing-l);
 }
 
 body::before {
@@ -36,11 +44,17 @@ body::before {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 16px 30px;
-	background-color: #0A0A0ADE;
+	padding: var(--spacing-m) var(--spacing-l);
+	background-color: var(--color-bg-80);
+	backdrop-filter: var(--blur);
 	color: var(--text-light);
 	box-shadow: 0 4px 8px #00000055;
 	transition: var(--transition);
+	margin-bottom: 50px;
+}
+
+.header:has(button:hover) {
+	background-color: var(--color-bg-0);
 }
 
 .header h1 {
@@ -63,8 +77,4 @@ body::before {
 
 .navbar button:hover {
 	border-bottom: 2px solid #ffb7c5;
-}
-
-.header:has(button:hover) {
-	background-color: #0A0A0A;
 }
