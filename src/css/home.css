@@ -1,0 +1,71 @@
+#home {
+	padding: 0 var(--spacing-l);
+	display: grid;
+	grid-template-areas: 
+	"card-1 card-1 ."
+	". card-2 card-2";
+	gap: 25px;
+}
+
+.card {
+	color: var(--text-light);
+	background-color: var(--color-bg-80);
+	backdrop-filter: var(--blur);
+	padding: var(--spacing-l) 30px;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 42px;
+	line-height: 1.5;
+	border-radius: var(--border-radius);
+	box-shadow: var(--shadow);
+	transition: var(--transition);
+}
+
+.card:has(button:hover) {
+	background-color: var(--color-bg-0);
+}
+
+.card:first-child {
+	grid-area: card-1;
+}
+
+.card:last-child {
+	grid-area: card-2;
+}
+
+.card .card-body {
+	display: grid;
+	grid-template-rows: repeat(3, auto);
+	gap: var(--spacing-m)
+}
+
+.card .card-text {
+	display: grid;
+	gap: var(--spacing-m)
+}
+
+.card .card-control {
+	align-self: end;
+}
+
+.card-control button {
+	background-color: #ffb7c5dd;
+	color: var(--text-dark);
+	padding: var(--spacing-s) var(--spacing-m);
+	border-radius: var(--border-radius);
+	transition: var(--transition);
+	font-weight: 600;
+	font-size: 1.1rem;
+}
+
+.card-control button:hover {
+	background-color: #ffb7c5;
+}
+
+.logo {
+	align-self: center;
+}
+
+.logo img {
+	border-radius: var(--border-radius);
+}
