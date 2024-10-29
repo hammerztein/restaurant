@@ -18,11 +18,17 @@ li {
 	list-style: none;
 }
 
+a {
+	text-decoration: none;
+}
+
 input,
 button,
 textarea,
-select {
+select,
+a {
 	font: inherit;
+	color: inherit;
 }
 
 button {

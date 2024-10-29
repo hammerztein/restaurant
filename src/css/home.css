@@ -59,7 +59,7 @@
 }
 
 .card-control button:hover {
-	background-color: #ffb7c5;
+	background-color: var(--color-pink);
 }
 
 .logo {
