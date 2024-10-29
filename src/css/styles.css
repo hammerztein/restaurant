@@ -53,7 +53,6 @@ body::before {
 	background-color: var(--color-bg-80);
 	backdrop-filter: var(--blur);
 	box-shadow: 0 4px 8px #00000055;
-	margin-bottom: 50px;
 	transition: var(--transition);
 }
 
@@ -83,9 +82,13 @@ body::before {
 	border-bottom: 2px solid var(--color-pink);
 }
 
+.container {
+	padding: 50px 0 100px;
+	min-height: 100dvh;
+}
+
 .footer {
 	background-color: var(--color-bg-0);
-	margin-top: 100px;
 	padding: var(--spacing-l);
 	display: grid;
 	grid-template: auto auto / repeat(3, auto);
