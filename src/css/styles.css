@@ -9,6 +9,7 @@
 	--border-radius: 6px;
 	--color-bg-80: #0A0A0ACC;
 	--color-bg-0: #0A0A0A;
+	--color-pink: #ffb7c5;
 	--blur: blur(8px);
 }
 
@@ -26,8 +27,7 @@ body {
 	min-height: 100dvh;
 	font-family: Main, "Helvetica", sans-serif;
 	position: relative;
-	background-color: #ffb7c5;
-	padding-bottom: var(--spacing-l);
+	background-color: var(--color-pink);
 }
 
 body::before {
@@ -40,17 +40,21 @@ body::before {
 	z-index: -1;
 }
 
-.header {
+.header,
+.footer {
+	color: var(--text-light);
 	display: flex;
+}
+
+.header {
+	padding: var(--spacing-m) var(--spacing-l);
 	align-items: center;
 	justify-content: space-between;
-	padding: var(--spacing-m) var(--spacing-l);
 	background-color: var(--color-bg-80);
 	backdrop-filter: var(--blur);
-	color: var(--text-light);
 	box-shadow: 0 4px 8px #00000055;
-	transition: var(--transition);
 	margin-bottom: 50px;
+	transition: var(--transition);
 }
 
 .header:has(button:hover) {
@@ -76,5 +80,90 @@ body::before {
 }
 
 .navbar button:hover {
-	border-bottom: 2px solid #ffb7c5;
+	border-bottom: 2px solid var(--color-pink);
+}
+
+.footer {
+	background-color: var(--color-bg-0);
+	margin-top: 100px;
+	padding: var(--spacing-l);
+	display: grid;
+	grid-template: auto auto / repeat(3, auto);
+	justify-content: space-evenly;
+}
+
+.footer .footer-section h3 {
+	margin-bottom: 12px;
+}
+
+.footer .footer-section.subscription {
+	min-width: 300px
+}
+
+.footer .footer-section ul {
+	display: grid;
+	gap: 6px;
+}
+
+.footer-section #newsletter {
+	display: grid;
+	gap: var(--spacing-s);
+	margin-bottom: var(--spacing-l);
+}
+
+.footer-section #newsletter input {
+	padding: 6px;
+	border-radius: var(--border-radius);
+	outline: none;
+	border: 1px solid transparent;
+	background-color: var(--text-light);
+	color: var(--text-dark);
+}
+
+.footer-section #newsletter input:active,
+.footer-section #newsletter input:focus,
+.footer-section #newsletter input:focus-visible {
+	box-shadow: 0 0 8px 2px orangered;
+}
+
+.footer-section #newsletter button {
+	background-color: #ffb7c5dd;
+	color: var(--text-dark);
+	padding: 6px var(--spacing-m);
+	border-radius: var(--border-radius);
+	transition: var(--transition);
+	font-weight: 600;
+}
+
+.footer-section #newsletter button:hover {
+	background-color: var(--color-pink);
+}
+
+.footer-section .socials {
+	display: flex;
+	justify-content: space-around;
+}
+
+.footer-section .socials svg {
+	height: 34px;
+	width: 34px;
+	fill: currentColor;
+	transition: var(--transition);
+}
+
+.footer-section .socials a:hover svg {
+	fill: var(--color-pink);
+	transform: scale(1.08);
+}
+
+.footer .copyright {
+	grid-column: span 3;
+	text-align: center;
+	border-top: 1px solid #696969;
+	padding-top: var(--spacing-l);
+	margin-top: var(--spacing-l);
+}
+
+.footer a:hover {
+	color: var(--color-pink);
 }
