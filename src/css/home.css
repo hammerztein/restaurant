@@ -1,5 +1,4 @@
 #home {
-	padding: 0 var(--spacing-l);
 	display: grid;
 	grid-template-areas: 
 	"card-1 card-1 ."

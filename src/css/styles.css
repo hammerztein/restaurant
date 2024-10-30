@@ -83,7 +83,7 @@ body::before {
 }
 
 .container {
-	padding: 50px 0 100px;
+	padding: 50px 7% 100px;
 	min-height: 100dvh;
 }
 
