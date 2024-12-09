@@ -24,7 +24,6 @@
 }
 
 body {
-	min-height: 100dvh;
 	font-family: Main, "Helvetica", sans-serif;
 	position: relative;
 	background-color: var(--color-pink);
