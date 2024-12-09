@@ -2,13 +2,16 @@
 import '../css/reset.css';
 import '../css/styles.css';
 import { createHomeSection } from './home.js';
+import { createMenuSection } from './menu.js';
 
 (() => {
 	const container = document.querySelector('.container');
 	const homeBtn = document.querySelector(".navbar button[data-target='home']");
+	const menuBtn = document.querySelector(".navbar button[data-target='menu'");
 
 	const attachEventHandlers = () => {
 		homeBtn.addEventListener('click', loadHomePage);
+		menuBtn.addEventListener('click', loadMenuPage);
 	};
 
 	const clearContainer = () => {
@@ -23,6 +26,12 @@ import { createHomeSection } from './home.js';
 		clearContainer();
 		const homeSection = createHomeSection();
 		container.appendChild(homeSection);
+	};
+
+	const loadMenuPage = () => {
+		clearContainer();
+		const menuSection = createMenuSection();
+		container.appendChild(menuSection);
 	};
 
 	loadHomePage();
