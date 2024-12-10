@@ -12,15 +12,21 @@
 #menu header {
 	text-align: center;
 	grid-column: span 2;
-	width: 75%;
-	margin: 0 auto;
+	margin: 0 auto 10px;
+}
+
+#menu header h2 {
+	font-size: 2.25rem;
+	color: var(--color-pink);
+	text-shadow: 0 0 15px #ffb7c580;
 }
 
 #menu header .divider {
+	width: 10%;
 	height: 4px;
 	border-radius: 3px;
 	background-color: var(--color-pink);
-	margin: 10px auto;
+	margin: 10px auto 25px;
 }
 
 .menu-card {

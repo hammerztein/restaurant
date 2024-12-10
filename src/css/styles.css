@@ -84,6 +84,7 @@ body::before {
 .container {
 	padding: 50px 7% 100px;
 	min-height: 100dvh;
+	display: grid;
 }
 
 .footer {
@@ -122,10 +123,8 @@ body::before {
 	color: var(--text-dark);
 }
 
-.footer-section #newsletter input:active,
-.footer-section #newsletter input:focus,
-.footer-section #newsletter input:focus-visible {
-	box-shadow: 0 0 8px 2px orangered;
+.footer-section #newsletter input::placeholder {
+	font-style: italic;
 }
 
 .footer-section #newsletter button {
