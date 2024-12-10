@@ -1,17 +1,36 @@
-// CSS reset as a side effect
 import '../css/reset.css';
 import '../css/styles.css';
 import { createHomeSection } from './home.js';
 import { createMenuSection } from './menu.js';
+import { createContactSection } from './contact.js';
 
 (() => {
 	const container = document.querySelector('.container');
-	const homeBtn = document.querySelector(".navbar button[data-target='home']");
-	const menuBtn = document.querySelector(".navbar button[data-target='menu'");
+
+	const initializeNavBtns = () => {
+		const btns = {
+			home: createHomeSection,
+			menu: createMenuSection,
+			contact: createContactSection,
+		};
+
+		const navBtns = document.querySelectorAll('.navbar button');
+
+		navBtns.forEach((button) => {
+			const buttonTarget = button.dataset.target;
+
+			button.addEventListener('click', () => {
+				loadPage(btns[buttonTarget]);
+			});
+		});
+
+		navBtns.forEach((button) => {
+			getEventListeners();
+		});
+	};
 
 	const attachEventHandlers = () => {
-		homeBtn.addEventListener('click', loadHomePage);
-		menuBtn.addEventListener('click', loadMenuPage);
+		initializeNavBtns();
 	};
 
 	const clearContainer = () => {
@@ -22,20 +41,13 @@ import { createMenuSection } from './menu.js';
 		}
 	};
 
-	const loadHomePage = () => {
+	const loadPage = (callback) => {
 		clearContainer();
-		const homeSection = createHomeSection();
-		container.appendChild(homeSection);
+		const section = callback();
+		container.appendChild(section);
 	};
 
-	const loadMenuPage = () => {
-		clearContainer();
-		const menuSection = createMenuSection();
-		container.appendChild(menuSection);
-	};
-
-	loadHomePage();
+	// Load initial home page
+	loadPage(createHomeSection);
 	attachEventHandlers();
 })();
-
-console.log('Script Attached');
