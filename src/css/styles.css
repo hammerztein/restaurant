@@ -170,6 +170,12 @@ body::before {
 	margin-top: var(--spacing-l);
 }
 
+.footer a {
+	transition: var(--transition);
+	border-bottom: 1px solid transparent;
+}
+
 .footer a:hover {
 	color: var(--color-pink);
+	border-bottom: 1px solid #ddd;
 }
