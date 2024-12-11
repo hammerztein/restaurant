@@ -20,12 +20,10 @@ import { createContactSection } from './contact.js';
 			const buttonTarget = button.dataset.target;
 
 			button.addEventListener('click', () => {
+				navBtns.forEach((button) => button.classList.remove('active'));
+				button.classList.add('active');
 				loadPage(btns[buttonTarget]);
 			});
-		});
-
-		navBtns.forEach((button) => {
-			getEventListeners();
 		});
 	};
 

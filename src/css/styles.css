@@ -62,6 +62,7 @@ body::before {
 .header h1 {
 	font-family: Accent;
 	font-size: clamp(1.5rem, 3vw, 2.25rem);
+	text-shadow: 0 0 15px #ffb7c580;
 }
 
 .navbar {
@@ -75,6 +76,10 @@ body::before {
 	color: var(--text-light);
 	border-bottom: 2px solid transparent;
 	transition: var(--transition);
+}
+
+.navbar button.active {
+	color: #eb3d37;
 }
 
 .navbar button:hover {
