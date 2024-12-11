@@ -8,7 +8,7 @@ Create a dynamically rendered restaurant page using webpack bundler.
 
 ## Links
 
-[Live app preview](https://hammerztein.github.io/game-library/)
+[Live app preview](https://hammerztein.github.io/restaurant/)
 
 ## Things I Used
 
