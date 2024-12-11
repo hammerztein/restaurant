@@ -3,7 +3,7 @@
 		"build": "webpack",
 		"dev": "webpack serve",
 		"merge": "git checkout gh-pages && git merge main --no-edit",
-		"dist": "git add dist -f && git commit -m 'Update Deployment'",
+		"dist": "git add dist -f && git commit -m \"Update Deployment\"",
 		"deploy": "git subtree push --prefix dist origin gh-pages" 
 	},
   "devDependencies": {
